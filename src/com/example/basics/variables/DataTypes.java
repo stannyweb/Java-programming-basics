@@ -22,5 +22,8 @@ public class DataTypes {
         System.out.println("double: " + doubleValue + " (64 bits)");
         System.out.println("char: " + charValue + " (16 bits)");
         System.out.println("boolean: " + booleanValue + " (not precisely defined)");
+        
     }
+
+
 }
