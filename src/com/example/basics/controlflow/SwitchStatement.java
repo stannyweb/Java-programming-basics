@@ -9,51 +9,26 @@ public class SwitchStatement {
         int dayOfWeek = 3; // Example: Let's say dayOfWeek is 3 (Wednesday)
 
         switch (dayOfWeek) {
-            case 1:
-                System.out.println("Monday");
-                break; // Important: break statement exits the switch block
-            case 2:
-                System.out.println("Tuesday");
-                break;
-            case 3:
-                System.out.println("Wednesday");
-                break;
-            case 4:
-                System.out.println("Thursday");
-                break;
-            case 5:
-                System.out.println("Friday");
-                break;
-            case 6:
-                System.out.println("Saturday");
-                break;
-            case 7:
-                System.out.println("Sunday");
-                break;
-            default:
-                System.out.println("Invalid day"); // Executed if none of the cases match
+            case 1 -> System.out.println("Monday");
+            // Important: break statement exits the switch block
+            case 2 -> System.out.println("Tuesday");
+            case 3 -> System.out.println("Wednesday");
+            case 4 -> System.out.println("Thursday");
+            case 5 -> System.out.println("Friday");
+            case 6 -> System.out.println("Saturday");
+            case 7 -> System.out.println("Sunday");
+            default -> System.out.println("Invalid day"); // Executed if none of the cases match
         }
 
         char grade = 'B'; // Example: Let's say the grade is 'B'
 
         switch (grade) {
-            case 'A':
-                System.out.println("Excellent!");
-                break;
-            case 'B':
-                System.out.println("Good");
-                break;
-            case 'C':
-                System.out.println("Average");
-                break;
-            case 'D':
-                System.out.println("Poor");
-                break;
-            case 'F':
-                System.out.println("Fail");
-                break;
-            default:
-                System.out.println("Invalid grade");
+            case 'A' -> System.out.println("Excellent!");
+            case 'B' -> System.out.println("Good");
+            case 'C' -> System.out.println("Average");
+            case 'D' -> System.out.println("Poor");
+            case 'F' -> System.out.println("Fail");
+            default -> System.out.println("Invalid grade");
         }
 
         String nameOfFruit = getString();
