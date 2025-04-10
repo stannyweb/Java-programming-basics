@@ -1,5 +1,7 @@
 package com.example.basics.controlflow;
 
+import java.lang.reflect.AnnotatedArrayType;
+
 public class SwitchStatement {
 
     public static void main(String[] args) {
@@ -54,18 +56,26 @@ public class SwitchStatement {
                 System.out.println("Invalid grade");
         }
 
-        String fruit = "apple"; // Example: Let's say the fruit is "apple"
+        String nameOfFruit = getString();
+        System.out.println(nameOfFruit);
+    }
 
-        switch (fruit) {
-            case "apple":
-            case "banana":
-                System.out.println("Common fruit"); // Multiple cases can share the same code block
-                break;
-            case "orange":
-                System.out.println("Citrus fruit");
-                break;
-            default:
-                System.out.println("Unknown fruit");
-        }
+    private static String getString() {
+
+        String fruit = "Apple"; // Example: Let's say the fruit is "Apple"
+
+        String nameOfFruit = switch (fruit) {
+            case "Apple", "Orange" -> {
+                String color = "Red or Green";
+                String taste = "Sweet and crisp";
+
+                yield String.format("An %s is %s and has a %s taste.", fruit, color, taste);
+            }
+            case "Banana" -> {
+                yield "A banana is usually yellow and soft";
+            }
+            default -> "Unknown fruit";
+        };
+        return nameOfFruit;
     }
 }
