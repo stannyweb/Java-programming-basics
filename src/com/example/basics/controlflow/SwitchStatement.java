@@ -1,5 +1,6 @@
 package com.example.basics.controlflow;
 
+import java.io.PrintStream;
 import java.lang.reflect.AnnotatedArrayType;
 
 public class SwitchStatement {
@@ -33,6 +34,16 @@ public class SwitchStatement {
 
         String nameOfFruit = getString();
         System.out.println(nameOfFruit);
+
+
+        char charValue = 'B';
+        String letterValue = switch (charValue) {
+            case 'A' -> String.format("%c letter is for name Able", charValue);
+            case 'B' -> String.format("%c letter is for name Baker", charValue);
+            default -> throw new IllegalStateException("Unexpected value: " + charValue);
+        };
+
+        System.out.println(letterValue);
     }
 
     private static String getString() {
@@ -53,4 +64,6 @@ public class SwitchStatement {
         };
         return nameOfFruit;
     }
+
+
 }
