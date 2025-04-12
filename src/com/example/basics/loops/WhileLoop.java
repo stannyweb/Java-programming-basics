@@ -27,6 +27,7 @@ public class WhileLoop {
         System.out.println("Example 3: While loop controlled by a boolean flag");
         boolean running = true;
         int counter = 0;
+
         while (running) {
             System.out.println("Counter is: " + counter);
             counter++;
